@@ -1,0 +1,19 @@
+jobs:
+  include:
+    - stage: test
+      name: "Testing C/C++ codes"
+      language: cpp
+      os: linux
+      dist: bionic
+      sudo: required
+      compiler: gcc
+      before_script: |
+        cmake --version
+        config/dependencies.sh
+      script: |
+	cd ./bin
+        ./run.sh
+
+notifications:
+  email: worldisonlyme@163.com
+
