@@ -11,7 +11,7 @@ jobs:
         cmake --version
         config/dependencies.sh
       script: |
-	cd ./bin
+        cd ./bin
         ./run.sh
 
 notifications:
